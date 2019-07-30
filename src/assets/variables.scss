@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+body {
+    background-color: #f5f7f9;
+}
+
+$primary: #1e9067 !default;
+$primary-100: #50808E !default;
+$primary-200: #69A297 !default;
+
+a, .page-item.active, .page-link {
+    color: $primary;
+}
+a:hover, .page-item.active:hover, .page-link:hover {
+    color: $primary-100;
+}
+
+.text-primary {
+    color: $primary !important;
+}
+
+.page-item.active .page-link, .btn-primary {
+    color: #fff;
+    background-color: $primary;
+    border-color: $primary-100;
+}
+.page-item.active .page-link, .btn-primary:hover {
+    color: #fff;
+    background-color: $primary-100;
+    border-color: $primary;
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+    color: #fff;
+    background-color: $primary-100;
+    border-color: $primary-100;
+}
+
+.page-item.active .page-link, .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: $primary-200;
+    border-color: $primary;
+}
+
+.page-item.active .page-link, .btn-primary:focus, .btn:focus, .btn.focus, .page-link:focus {
+    outline: 0;
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 112, 9, 0.25)!important;
+    box-shadow: 0 0 0 0.2rem rgba(0, 112, 9, 0.25)!important;
+}
+
+
+
+
+
+
+
