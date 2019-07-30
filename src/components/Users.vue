@@ -42,7 +42,9 @@
                 @filtered="onFiltered"
               >
                 <template content-class="mt-3" slot="avatar" slot-scope="data">
-                  <img class="avatar" v-bind:src="data.value" alt />
+                  <div class="avatar">
+                    <img v-bind:src="data.value" alt />
+                  </div>
                 </template>
                 <template slot="fullname" slot-scope="data">{{ data.value }}</template>
 
@@ -130,7 +132,15 @@ export default {
   }
   .avatar {
     width: 50px;
-    border-radius: 50px;
+    height: 50px;
+    img {
+      border-radius: 50px;
+      object-fit: cover;
+      width: 100% !important;
+      height: 100% !important;
+      vertical-align: middle;
+      justify-content: center;
+    }
   }
 
   .material-icons:focus {
