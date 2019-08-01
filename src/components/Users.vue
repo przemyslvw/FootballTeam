@@ -98,14 +98,10 @@ export default {
       this.totalRows = filteredItems.length;
       this.currentPage = 1;
     },
-    ...mapActions(["createdUsers"]),
-    ...mapActions(["remove"]),
-    ...mapActions(["gotoedit"])
+    ...mapActions(["createdUsers", "remove", "gotoedit"])
   },
   computed: {
-    ...mapGetters(["allUsers"]),
-    ...mapGetters(["rows"]),
-    ...mapGetters(["loading"])
+    ...mapGetters(["allUsers", "rows", "loading"])
   }
 };
 </script>
