@@ -17,7 +17,7 @@ const getters = {
 };
 const actions = {
     async createdUsers({ commit }) {
-        const response = await axios
+        await axios
             .get("/users", {
                 params: {
                     per_page: 12
@@ -35,8 +35,7 @@ const actions = {
     async remove({ commit }, id) {
         if (confirm(`Jesteś pewien?`)) {
             if (id != undefined) {
-
-                const response = await axios
+                await axios
                     .delete(`/users/${id}`)
                     .then(response => {
                         console.log("Wykasowany", response);
@@ -48,7 +47,7 @@ const actions = {
         }
     },
     async adding({ commit }, userData) {
-        const response = await axios
+        await axios
             .post("/users/", userData)
             .then(response => {
                 console.log("Dodany", response);
@@ -59,7 +58,7 @@ const actions = {
 
     },
     async saveEdit({ commit }, editData) {
-        const response = await axios
+        await axios
             .patch(`/users/${editData.id}`, editData)
             .then(response => {
                 console.log("Edytowany", response);
